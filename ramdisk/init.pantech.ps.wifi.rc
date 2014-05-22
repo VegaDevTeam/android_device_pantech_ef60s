@@ -1,0 +1,11 @@
+   
+# wifi_log_monitor
+service logmonitor /system/bin/wifi_log_monitor
+    class main
+    disabled
+    oneshot
+
+# wifi_event_server
+service eventserver /system/bin/wifi_event_server
+    class main
+    

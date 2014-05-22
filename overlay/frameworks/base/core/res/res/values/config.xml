@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2011, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
+    <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveNotificationLed">true</bool>
+    
+    <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <bool name="config_intrusiveBatteryLed">true</bool>
+
+    <!-- Does the battery LED support multiple colors? Used to decide if the user can change the colors -->
+    <bool name="config_multiColorBatteryLed">true</bool>
+    
+    <integer name="config_notificationsBatteryLowARGB">0xff8f8080</integer>
+    <integer name="config_notificationsBatteryMediumARGB">0xffcfc0cf</integer>
+    <integer name="config_notificationsBatteryFullARGB">0xff000f00</integer>
+    <integer name="config_notificationsBatteryLedOn">125</integer>
+    <integer name="config_notificationsBatteryLedOff">2875</integer>
+
+    <!-- Default color for notification LED is red. -->
+    <color name="config_defaultNotificationColor">#ff00ff00</color>
+
+    <!-- Default LED on time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOn">1000</integer>
+
+    <!-- Default LED off time for notification LED in milliseconds. -->
+    <integer name="config_defaultNotificationLedOff">3000</integer>
+
+    
+	<!-- Set to true if the RSSI should always display CDMA signal
+         strength even on EVDO -->
+    <bool name="config_alwaysUseCdmaRssi">false</bool>
+    
+    <!-- Disable lockscreen translucent decor by default -->
+    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
+</resources>
