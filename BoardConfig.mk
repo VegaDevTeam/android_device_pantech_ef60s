@@ -69,7 +69,7 @@ BOARD_CUSTOM_BOOTIMG_MK := device/pantech/ef60s/mkbootimg.mk
 
 endif
 
-TARGET_KERNEL_CUSTOM_TOOLCHAIN:= linaro-4.8
+#TARGET_KERNEL_CUSTOM_TOOLCHAIN:= linaro-4.8
 
 #RIL
 BOARD_RIL_CLASS := ../../../device/pantech/ef60s/ril/
