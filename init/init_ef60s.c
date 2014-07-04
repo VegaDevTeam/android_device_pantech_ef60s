@@ -80,20 +80,32 @@ void init_msm_properties(unsigned long msm_id, unsigned long msm_ver, char *boar
         fclose(fp);
     }
     
-    property_set("ro.product.device", "ef60s");
+    
 
-	sprintf(tmp_buf,"syhost/VEGA/%s:4.4.2/KVT49L/%s:user/release-keys",device_buf, sw_buf);
+	sprintf(tmp_buf,"syhost/VEGA/%s:4.4.4/KTU84P/%s:user/release-keys",device_buf, sw_buf);
     property_set("ro.build.fingerprint", tmp_buf);
     property_set("ro.product.model", device_buf);
     
     if(!strncmp(device_buf, "IM-A900S", 8))
-    	sprintf(tmp_buf,"mk_ef60s-userdebug 4.4.2 KVT49L %s release-keys", sw_buf);
+    {
+    	sprintf(tmp_buf,"mk_ef60s-userdebug 4.4.4 KTU84P %s release-keys", sw_buf);
+    	property_set("ro.product.device", "ef60s");
+    }
     else if(!strncmp(device_buf, "IM-A900K", 8))
-    	sprintf(tmp_buf,"mk_ef61k-userdebug 4.4.2 KVT49L %s release-keys", sw_buf);
+   	{
+    	sprintf(tmp_buf,"mk_ef61k-userdebug 4.4.4 KTU84P %s release-keys", sw_buf);
+    	property_set("ro.product.device", "ef61k");
+    }
     else if(!strncmp(device_buf, "IM-A900L", 8))
-    	sprintf(tmp_buf,"mk_ef62l-userdebug 4.4.2 KVT49L %s release-keys", sw_buf);
+    {
+    	sprintf(tmp_buf,"mk_ef62l-userdebug 4.4.4 KTU84P %s release-keys", sw_buf);
+    	property_set("ro.product.device", "ef62l");
+    }
     else
-    	sprintf(tmp_buf,"mk_ef60s-userdebug 4.4.2 KVT49L S0223215 release-keys");
+    {
+    	sprintf(tmp_buf,"mk_ef60s-userdebug 4.4.4 KTU84P S0223215 release-keys");
+    	property_set("ro.product.device", "ef60s");
+    }
     	
     property_set("ro.build.description", tmp_buf);      
 }
